@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+   <script>
+     
+     $(document).ready(function(){
+       const link = "http://www.wikipedia.org/wiki/";
+       $(".planet").hover(function(){
+         var a = $(this).attr('src')
+         
+         var complete_link = link + $(this).attr('id') 
+         $("#main_image").attr('src' , a);
+         $(".details").attr('href' , complete_link);
+       }, function(){
+         $("#main_image").attr('src' ,  'https://upload.wikimedia.org/wikipedia/commons/c/cb/Planets2013.svg' );
+       });
+     });
+     
+     
+    </script>
+    
+  </head>
+  <body>
+    <center><h1><a href="https://en.wikipedia.org/wiki/Solar_System" target = "_blank">Solar System</a></h1></center>
+    <img id = "main_image" src = "https://upload.wikimedia.org/wikipedia/commons/c/cb/Planets2013.svg" height="400" width="800" />
+    <a class = "details" href = "https://en.wikipedia.org/wiki/Jupiter"  target = "_blank" >
+    <table>
+       
+      <tr>
+        <td>
+            <img id = 'Mercury' class = "planet" src = "https://upload.wikimedia.org/wikipedia/commons/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg" height="100" width="100" />
+        </td>
+        <td>
+          <img id = 'Venus' class = "planet" src = "https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg"  height="100" width="100" />
+        </td>
+        <td>
+          <img id = 'Earth' class = "planet" src = "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg"  height="100" width="100" />
+        </td>
+        <td>
+          <img id = 'Mars' class = "planet" src = "https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg"  height="100" width="100" />
+        </td>
+        <td>
+          <img id = 'Jupiter' class = "planet" src = "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg"  height="100" width="100" />
+        </td>
+        <td>
+          <img id = 'Saturn' class = "planet" src = "https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg"  height="100" width="100" />
+        </td>
+        <td>
+          <img id = 'Uranus' class = "planet" src = "https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg"  height="100" width="100" />
+        </td>
+        <td>
+          <img id = 'Neptune' class = "planet" src = "https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg"  height="100" width="100" />
+        </td>
+        
+      </tr>
+     
+    </table>
+    </a>
+    
+    <p>
+      <a href="mailto:feedback@planets.com?subject=Feedback!&body=Hello, I have a question about: ">Contact us for <strong>Questions</strong> and <strong>Suggestions</strong></a>
+    </p>
+  </body>
+</html>
